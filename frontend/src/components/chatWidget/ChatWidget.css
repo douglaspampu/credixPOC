@@ -1,0 +1,69 @@
+
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+    margin-right: 10%;
+    width: 70%;
+    background-color: white;
+    min-height: 500px;
+    max-height: 90%;
+    border-style: solid;
+    border-radius: 5px;
+    overflow: auto;
+
+    display:flex;
+    flex-direction: column-reverse
+}
+
+.chat-content {
+    width: 75%;
+    margin: auto;
+    overflow: auto;
+    height: 90%;
+    padding:10px;
+}
+
+.question-box{
+    bottom: 20px;
+    margin-left: 5em;
+    width: 70%;
+    position:fixed;
+}
+
+.input{
+    width: 60%;
+    margin-bottom: 1em;
+}
+
+.chat-body{
+    width:80%;
+    overflow: auto;
+}
+
+.chat-small-card{
+    max-height: 300px;
+    width: 150px;
+    overflow: auto;
+    margin:1em;
+    justify-content: center;
+}
+.chat-big-card{
+    width: 300px;
+    overflow: auto;
+    margin:1em;
+    justify-content: center;
+}
+
+.chat-big-card img {
+    height: 150px;
+    width: 150px;
+}
+.chat-small-card img {
+    height: 100px;
+    width: 100px;
+}
+
+.closed {
+    display: none;
+}

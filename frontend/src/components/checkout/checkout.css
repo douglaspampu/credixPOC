@@ -1,0 +1,48 @@
+.item-list {
+    margin-left: 4em;
+    padding: 1em;
+    width: 70%;
+    justify-content: space-around;
+    display: flex;
+}
+
+.item {
+    justify-content: start;
+    display: flex;
+    width: 100px;
+    padding-left: 1em;
+}
+
+.total {
+    margin-left: 4em;
+    padding: 1em;
+    width: 70%;
+    justify-content:space-between;
+    display: flex;
+}
+
+.text {
+    justify-content: start;
+}
+
+.price{
+    justify-content: end;
+}
+.numeric-value {
+    justify-content: center;
+}
+
+.order-info {
+    width: 70%;
+    justify-content: space-around;
+    margin-left: 4em;
+    padding: 1em;
+    display: flex;
+}
+
+.complete-order{
+    display: flex;
+    justify-content: end;
+    margin: 3em;
+    width: 70%;
+}

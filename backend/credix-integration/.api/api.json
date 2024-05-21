@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "credix-credipay",
+      "source": "@credix-credipay/v1.0#1kx78flw7tj9us",
+      "integrity": "sha512-9nsmzdsxL/e4JE148cTJojsXcinbEcv5390x9gAMN7QOFezCa8J4Ce1oUWReGaUkSbxJBoKX4nha2CWQkAqVeg==",
+      "installerVersion": "6.1.1"
+    }
+  ]
+}
