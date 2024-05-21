@@ -7,7 +7,7 @@ export class CredixInterface {
     credixApiKey:string;
     constructor(){
         this.sellerTaxId = "37154724000108"
-        this.credixApiKey = "OTAyNjUyNmUtMGNmZi00NjdmLTg2YzYtY2YxNDc5MjhlMTIyOml3V093ME52V2dUdVp6eUd5SWdqKysybXFGNHFRUXZCUWZOcnRIZnVtZHM9"
+        this.credixApiKey = ""
         this.credixApiUrl = "https://api.pre.credix.finance/v1/"
     }
 
