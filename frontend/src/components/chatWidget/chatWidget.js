@@ -14,10 +14,6 @@ function ChatWidget() {
     setIsOpen(!isOpen);
   };
 
-
-    //access key AKIAXIAZXQQTTYVMPFXD
-    //secret 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
-
   const sendQuestion = async() => {
 
     const credentials = new AWS.CognitoIdentityCredentials({

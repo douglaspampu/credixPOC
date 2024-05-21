@@ -56,6 +56,21 @@ export class OrdersService {
     return `This action returns a #${id} order`;
   }
 
+  async finalizeOrder(id:string): Promise<Order> {
+    const order = await this.ordersRepository.findOne({
+      where:{
+        externalId:id
+      }
+    })
+
+    const credix = new CredixInterface()
+
+    const finalizedOrder = await credix.finalizeOrder(order.credixOrderId)
+
+    return finalizedOrder
+
+  }
+
   async update(id: string, updateOrderDto: UpdateOrderDto): Promise<Order> {
 
     const order = await this.ordersRepository.findOne({

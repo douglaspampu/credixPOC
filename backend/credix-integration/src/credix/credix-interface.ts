@@ -53,4 +53,25 @@ export class CredixInterface {
             throw error
         }
     }
+
+    finalizeOrder = async (orderId:string):Promise<any> => {
+        try {
+            const options = {
+                method: 'POST',
+                url: `${this.credixApiUrl}orders/${orderId}/finalize`,
+                headers: {
+                    accept: 'application/json',
+                    'content-type': 'application/json',
+                    'X-CREDIPAY-API-KEY': this.credixApiKey
+                },
+            }
+
+            const finalizedOrder = await axios.request(options)
+
+            return finalizedOrder.data
+        } catch (error){
+            console.log(error)
+            throw error
+        }
+    }
 }

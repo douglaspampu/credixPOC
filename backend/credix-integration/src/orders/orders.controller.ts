@@ -13,6 +13,11 @@ export class OrdersController {
     return await this.ordersService.create(createOrderDto);
   }
 
+  @Post(':id')
+  async finalizeOrder(@Param('id') id: string) {
+    return await this.ordersService.finalizeOrder(id)
+  }
+
   @Get()
   findAll() {
     return this.ordersService.findAll();
