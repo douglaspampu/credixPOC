@@ -1,5 +1,5 @@
 const credentials = new AWS.CognitoIdentityCredentials({
-        IdentityPoolId: "eu-central-1:f6bdb18e-6483-4ead-b10d-05ad0b93149d" // for example, us-east-1:1sample4-5678-90ef-aaaa-1234abcd56ef
+        IdentityPoolId: "" // for example, us-east-1:1sample4-5678-90ef-aaaa-1234abcd56ef
      });
 
      console.log(credentials)
@@ -7,19 +7,10 @@ const credentials = new AWS.CognitoIdentityCredentials({
 
      const lex = new AWS.LexRuntimeV2({
         region:'eu-central-1',
-        credentials:new AWS.Credentials({
-            accessKeyId:"AKIAXIAZXQQTTYVMPFXD",
-            secretAccessKey:"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"
-        })
+        credentials:new AWS.Credentials()
     })
 
-     const lexparams = {
-        "botAliasId": "TSTALIASID",   // Enter the botAliasId
-        "botId": "LTRFN7KSZM",         // Enter the botId
-        "localeId": "en_US",
-        "text": message,
-        "sessionId": "498270176132411"
-      };
+     const lexparams = {};
 
      console.log(lex)
 
