@@ -77,6 +77,10 @@ const Checkout = () => {
         <div class="content">
             <div>
                 <div class="order-info">
+                <label>Order reference:</label>
+                <label>{orderData.externalId}</label>
+                </div>
+                <div class="order-info">
                     <label>Buyer tax id:</label>
                     <label>{orderData.buyerTaxId}</label>
                 </div>

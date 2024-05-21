@@ -89,8 +89,6 @@ export class OrdersService {
 
     const credixOrder = await credix.createOrder(order)
 
-    console.log(credixOrder)
-
     order.orderStatus = OrderStatus.Pending
     order.credixOrderId = credixOrder.id
 

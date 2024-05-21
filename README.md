@@ -35,6 +35,10 @@ On the backend it was implemented:
   - Creates the order on Credipay
   - Updates the order on the database with the Credipay order ID
   - Return the updated order data
+- Finalize order flow endpoint : POST /orders/:externalId/finalize
+  - Receives the external id and gets the Credipay order id from the database
+  - Calls the finalize order endpoint on credipay
+  - Returns status 200 if successful
 
 On the Frontend it was implemented:
 - A product catalog with a button to add product into the cart

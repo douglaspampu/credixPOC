@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom"; 
+import {products} from "./catalogData"
 
 const Catalog = () => {
     const url = 'https://d9aemxxda5.execute-api.eu-central-1.amazonaws.com/'
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState([])
 
     const [cart, setCart] = useState([])
 
@@ -20,8 +21,8 @@ const Catalog = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(`${url}/sandbox/getproducts`)
-            setData(response.data.ingredients);
+            //const response = await axios.get(`${url}/sandbox/getproducts`)
+            setData(products);
         } catch (error) {
             console.error('Error fetching data:', error);
         }

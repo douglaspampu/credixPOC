@@ -13,7 +13,8 @@ export class OrdersController {
     return await this.ordersService.create(createOrderDto);
   }
 
-  @Post(':id')
+  @UseInterceptors(ClassSerializerInterceptor)
+  @Post(':id/finalize')
   async finalizeOrder(@Param('id') id: string) {
     return await this.ordersService.finalizeOrder(id)
   }
@@ -28,6 +29,7 @@ export class OrdersController {
     return this.ordersService.findOne(+id);
   }
 
+  @UseInterceptors(ClassSerializerInterceptor)
   @Patch(':id')
   async update(@Param('id') id: string, @Body() updateOrderDto: UpdateOrderDto) {
     return await this.ordersService.update(id, updateOrderDto);
